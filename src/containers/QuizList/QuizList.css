@@ -5,10 +5,9 @@
 	flex-grow: 1;
 	width: 100%;
 	background-image: linear-gradient(
-		-225deg,
-		hsl(216, 70%, 20%) 0%,
-		hsl(210, 50%, 40%) 48%,
-		hsl(208, 70%, 20%) 100%
+		to right,
+		hsl(333, 75%, 70%) 0%,
+		hsl(242, 87%, 71%) 100%
 	);
 }
 
