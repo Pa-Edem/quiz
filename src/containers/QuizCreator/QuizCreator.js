@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import classes from './QuizCreator.css';
 
+import axios from '../../axios/axiosQuiz';
+
 import {
 	createControl,
 	validate,
@@ -88,11 +90,20 @@ export default class QuizCreator extends Component {
 		});
 	};
 
-	createQuizHandler = event => {
+	createQuizHandler = async event => {
 		event.preventDefault();
-		console.log('CREATE_TEST');
-		console.log(this.state.quiz);
-		// TODO Server
+
+		try {
+			await axios.post('/quizes.json', this.state.quiz);
+			this.setState({
+				quiz: [],
+				isFormValid: false,
+				rightAnswerId: 1,
+				formControls: createFormControl(),
+			});
+		} catch (error) {
+			console.error(error);
+		}
 	};
 
 	changeHandler = (value, name) => {
