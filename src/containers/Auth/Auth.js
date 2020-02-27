@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import classes from './Auth.css';
 
 import is from 'is_js';
+import axios from 'axios';
 
 import Button from '../../components/UI/Button/Button';
 import Input from '../../components/UI/Input/Input';
@@ -37,12 +38,38 @@ export default class Auth extends Component {
 		},
 	};
 
-	loginHandler = () => {
-		console.log('LOG_IN');
+	loginHandler = async () => {
+		const authData = {
+			email: this.state.formControls.email.value,
+			password: this.state.formControls.password.value,
+			returnSecureToken: true,
+		};
+		try {
+			const response = await axios.post(
+				'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDHp6rwp7P9appPWAiexfusJh6L470aKFQ',
+				authData
+			);
+			console.log('login', response.data);
+		} catch (error) {
+			console.error(error);
+		}
 	};
 
-	registerHandler = () => {
-		console.log('LOG_UP');
+	registerHandler = async () => {
+		const authData = {
+			email: this.state.formControls.email.value,
+			password: this.state.formControls.password.value,
+			returnSecureToken: true,
+		};
+		try {
+			const response = await axios.post(
+				'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDHp6rwp7P9appPWAiexfusJh6L470aKFQ',
+				authData
+			);
+			console.log('logup', response.data);
+		} catch (error) {
+			console.error(error);
+		}
 	};
 
 	submitHandler = event => {
