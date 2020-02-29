@@ -90,7 +90,7 @@ export default class Quiz extends Component {
 		return (
 			<div className="Quiz">
 				<div>
-					<h1>Ответьте на все вопросы</h1>
+					<h1>Answer all questions</h1>
 
 					{this.state.loading ? (
 						<Loader />

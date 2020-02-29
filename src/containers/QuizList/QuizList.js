@@ -29,7 +29,7 @@ export default class QuizList extends Component {
 			Object.keys(response.data).forEach((key, index) => {
 				quizes.push({
 					id: key,
-					name: `Test №${index + 1}`,
+					name: `Test № ${index + 1}`,
 				});
 			});
 			this.setState({ quizes, loading: false });

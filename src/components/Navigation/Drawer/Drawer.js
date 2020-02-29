@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom';
 import Backdrop from '../../UI/Backdrop/Backdrop';
 
 const links = [
-	{ to: '/', label: 'Список', exact: true },
-	{ to: '/auth', label: 'Авторизация', exact: false },
-	{ to: '/quiz-creator', label: 'Создать тест', exact: false },
+	{ to: '/', label: 'Test list', exact: true },
+	{ to: '/auth', label: 'Authorization', exact: false },
+	{ to: '/quiz-creator', label: 'Create test', exact: false },
 ];
 
 class Drawer extends Component {

@@ -16,8 +16,8 @@ import Select from '../../components/UI/Select/Select';
 function createOptionControl(number) {
 	return createControl(
 		{
-			label: `Вариант ${number}`,
-			errorMessage: 'Значение не может быть пустым',
+			label: `Version ${number}`,
+			errorMessage: 'Value cannot be empty',
 			id: number,
 		},
 		{
@@ -30,8 +30,8 @@ function createFormControl() {
 	return {
 		question: createControl(
 			{
-				label: 'Введите вопрос',
-				errorMessage: 'Вопрос не может быть пустым',
+				label: 'Enter a question',
+				errorMessage: 'The question cannot be empty',
 			},
 			{
 				required: true,
@@ -152,14 +152,14 @@ export default class QuizCreator extends Component {
 	render() {
 		const select = (
 			<Select
-				label="Выберите правильный ответ"
+				label="Choose the correct answer"
 				value={this.state.rightAnswerId}
 				onChange={this.selectChangeHandler}
 				options={[
-					{ text: 'Вариант 1', value: 1 },
-					{ text: 'Вариант 2', value: 2 },
-					{ text: 'Вариант 3', value: 3 },
-					{ text: 'Вариант 4', value: 4 },
+					{ text: 'Version 1', value: 1 },
+					{ text: 'Version 2', value: 2 },
+					{ text: 'Version 3', value: 3 },
+					{ text: 'Version 4', value: 4 },
 				]}
 			/>
 		);
@@ -167,7 +167,7 @@ export default class QuizCreator extends Component {
 		return (
 			<div className="QuizCreator">
 				<div>
-					<h1>Создание теста</h1>
+					<h1>Test creation</h1>
 
 					<form onSubmit={this.submitHandler}>
 						{this.renderControls()}
@@ -178,13 +178,13 @@ export default class QuizCreator extends Component {
 							type="primary"
 							onClick={this.addQuestionHandler}
 							disabled={!this.state.isFormValid}>
-							Добавить вопрос
+							Add Question
 						</Button>
 						<Button
 							type="success"
 							onClick={this.createQuizHandler}
 							disabled={this.state.quiz.length === 0}>
-							Создать тест
+							Create test
 						</Button>
 					</form>
 				</div>

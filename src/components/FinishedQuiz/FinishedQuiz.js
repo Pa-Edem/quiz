@@ -33,15 +33,15 @@ const FinishedQuiz = props => {
 			</ul>
 
 			<p>
-				Правильно {successCount} из {props.quiz.length}
+				Right {successCount} from {props.quiz.length}
 			</p>
 
 			<div>
 				<Button onClick={props.onRetry} type="primary">
-					Повторить
+					Repeat
 				</Button>
 				<Link to="/">
-					<Button type="success">Перейти в список тестов</Button>
+					<Button type="success">Go to the test list</Button>
 				</Link>
 			</div>
 		</div>
