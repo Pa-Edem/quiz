@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import classes from './Quiz.css';
+import './Quiz.scss';
 import ActiveQuiz from '../../components/ActiveQuiz/ActiveQuiz';
 import FinishedQuiz from '../../components/FinishedQuiz/FinishedQuiz';
 import axios from '../../axios/axiosQuiz';
 import Loader from '../../components/UI/Loader/Loader';
 
-class Quiz extends Component {
+export default class Quiz extends Component {
 	state = {
 		results: {},
 		isFinished: false,
@@ -88,8 +88,8 @@ class Quiz extends Component {
 
 	render() {
 		return (
-			<div className={classes.Quiz}>
-				<div className={classes.QuizWrapper}>
+			<div className="Quiz">
+				<div>
 					<h1>Ответьте на все вопросы</h1>
 
 					{this.state.loading ? (
@@ -115,5 +115,3 @@ class Quiz extends Component {
 		);
 	}
 }
-
-export default Quiz;

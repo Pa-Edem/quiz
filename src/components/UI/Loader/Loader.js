@@ -1,10 +1,10 @@
 import React from 'react';
-import classes from './Loader.css';
+import './Loader.scss';
 
 const Loader = () => {
 	return (
-		<div className={classes.center}>
-			<div className={classes.Loader}>
+		<div className={'center-loader'}>
+			<div className="Loader">
 				<div />
 				<div />
 				<div />

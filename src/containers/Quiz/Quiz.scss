@@ -10,13 +10,13 @@
 		hsl(253, 57%, 55%) 48%,
 		hsl(200, 90%, 65%) 100%
 	);
-}
 
-.Quiz h1 {
-	color: #fff;
-	margin-left: 10px;
-}
+	& > div {
+		width: 600px;
 
-.QuizWrapper {
-	width: 600px;
+		h1 {
+			color: #fff;
+			margin-left: 10px;
+		}
+	}
 }

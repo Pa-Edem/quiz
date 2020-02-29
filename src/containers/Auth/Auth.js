@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import classes from './Auth.css';
+import './Auth.scss';
 
 import is from 'is_js';
 import axios from 'axios';
@@ -136,11 +136,11 @@ export default class Auth extends Component {
 
 	render() {
 		return (
-			<div className={classes.Auth}>
+			<div className="Auth">
 				<div>
 					<h1>Авторизация</h1>
 
-					<form onSubmit={this.submitHandler} className={classes.AuthForm}>
+					<form onSubmit={this.submitHandler}>
 						{this.renderInputs()}
 
 						<Button

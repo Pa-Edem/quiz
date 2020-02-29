@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import classes from './QuizList.css';
+import './QuizList.scss';
 import { NavLink } from 'react-router-dom';
 import axios from '../../axios/axiosQuiz';
 
@@ -40,7 +40,7 @@ export default class QuizList extends Component {
 
 	render() {
 		return (
-			<div className={classes.QuizList}>
+			<div className="QuizList">
 				<div>
 					<h1>Список тестов</h1>
 

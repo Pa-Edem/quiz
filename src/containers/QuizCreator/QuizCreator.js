@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import classes from './QuizCreator.css';
+import './QuizCreator.scss';
 
 import axios from '../../axios/axiosQuiz';
 
@@ -165,13 +165,11 @@ export default class QuizCreator extends Component {
 		);
 
 		return (
-			<div className={classes.QuizCreator}>
+			<div className="QuizCreator">
 				<div>
 					<h1>Создание теста</h1>
 
-					<form
-						className={classes.QuizCreatorForm}
-						onSubmit={this.submitHandler}>
+					<form onSubmit={this.submitHandler}>
 						{this.renderControls()}
 
 						{select}
