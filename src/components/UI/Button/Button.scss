@@ -23,15 +23,15 @@
 		cursor: not-allowed;
 	}
 
-	&.error {
+	&.error-btn {
 		background: rgba(240, 87, 108, 1);
 	}
 
-	&.success {
+	&.success-btn {
 		background: rgba(161, 240, 69, 1);
 	}
 
-	&.primary {
+	&.primary-btn {
 		background: #2884f6;
 		color: #fff;
 	}

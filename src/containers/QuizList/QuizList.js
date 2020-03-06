@@ -29,7 +29,7 @@ export default class QuizList extends Component {
 			Object.keys(response.data).forEach((key, index) => {
 				quizes.push({
 					id: key,
-					name: `Test № ${index + 1}`,
+					name: `Test number ${index + 1}`,
 				});
 			});
 			this.setState({ quizes, loading: false });
@@ -42,7 +42,7 @@ export default class QuizList extends Component {
 		return (
 			<div className="QuizList">
 				<div>
-					<h1>Список тестов</h1>
+					<h1>Test list</h1>
 
 					{this.state.loading ? <Loader /> : <ul>{this.renderQuizes()}</ul>}
 				</div>
